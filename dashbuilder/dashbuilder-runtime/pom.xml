@@ -89,8 +89,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.jboss.spec.javax.xml.bind</groupId>
-      <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
       <scope>provided</scope>
     </dependency>
 
@@ -682,6 +682,16 @@
         <exclusion>
           <groupId>org.jboss.spec.javax.ws.rs</groupId>
           <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+        </exclusion>
+        <!-- Collides with jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:provided -->
+        <exclusion>
+          <groupId>org.jboss.spec.javax.xml.bind</groupId>
+          <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
+        </exclusion>
+        <!-- Collides with jakarta.activation:jakarta.activation-api:jar:1.2.2:provided -->
+        <exclusion>
+          <groupId>javax.activation</groupId>
+          <artifactId>activation</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
